@@ -4,7 +4,7 @@ export default function Item(props) {
       <ul>
         <li>
           <section>
-            <h2 className="font-bold">{props.name}</h2>
+            <h1 className="font-extrabold text-2xl pb-3" >{props.name}</h1>
             <p>
               Buy {props.quantity} in {props.category}
             </p>
