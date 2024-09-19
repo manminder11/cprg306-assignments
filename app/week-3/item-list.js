@@ -112,7 +112,7 @@ export default function ItemList() {
         name={item8.name}
         quantity={item8.quantity}
         category={item8.category}
-      />  
+      />
       <Item
         name={item9.name}
         quantity={item9.quantity}
@@ -133,8 +133,6 @@ export default function ItemList() {
         quantity={item12.quantity}
         category={item12.category}
       />
-      
-      
-      </main>
+    </main>
   );
 }
