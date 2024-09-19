@@ -3,7 +3,12 @@ export default function Item(props) {
     <main>
       <ul>
         <li>
-          {props.name} - {props.quantity} - {props.category}
+          <section>
+            <h2 className="font-bold">{props.name}</h2>
+            <p>
+              Buy {props.quantity} in {props.category}
+            </p>
+          </section>
         </li>
       </ul>
     </main>
