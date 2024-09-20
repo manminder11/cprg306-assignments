@@ -73,7 +73,7 @@ export default function ItemList() {
   };
   return (
     <main>
-      <div className="p-2 m-4 bg-neutral-500 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-neutral-500 max-w-sm rounded-3xl">
         <Item
           name={item1.name}
           quantity={item1.quantity}
@@ -81,7 +81,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-yellow-700 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-yellow-700 max-w-sm rounded-3xl">
         <Item
           name={item2.name}
           quantity={item2.quantity}
@@ -89,7 +89,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-blue-500 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-blue-500 max-w-sm rounded-3xl">
         <Item
           name={item3.name}
           quantity={item3.quantity}
@@ -97,7 +97,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-yellow-600 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-yellow-600 max-w-sm rounded-3xl">
         <Item
           name={item4.name}
           quantity={item4.quantity}
@@ -105,7 +105,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-green-700 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-green-700 max-w-sm rounded-3xl">
         <Item
           name={item5.name}
           quantity={item5.quantity}
@@ -113,7 +113,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-orange-500 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-orange-500 max-w-sm rounded-3xl">
         <Item
           name={item6.name}
           quantity={item6.quantity}
@@ -121,7 +121,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-red-600 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-red-600 max-w-sm rounded-3xl">
         <Item
           name={item7.name}
           quantity={item7.quantity}
@@ -129,7 +129,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-amber-400 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-amber-400 max-w-sm rounded-3xl">
         <Item
           name={item8.name}
           quantity={item8.quantity}
@@ -137,7 +137,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-stone-600 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-stone-600 max-w-sm rounded-3xl">
         <Item
           name={item9.name}
           quantity={item9.quantity}
@@ -145,7 +145,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-gray-700 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-gray-700 max-w-sm rounded-3xl">
         <Item
           name={item10.name}
           quantity={item10.quantity}
@@ -153,7 +153,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-violet-600 max-w-sm rounded-3xl">
+      <div className="p-2 pl-4 m-4 bg-violet-600 max-w-sm rounded-3xl">
         <Item
           name={item11.name}
           quantity={item11.quantity}
@@ -161,7 +161,7 @@ export default function ItemList() {
         />
       </div>
 
-      <div className="p-2 m-4 bg-teal-500 max-w-sm rounded-3xl">
+      <div className="p-2  pl-4 m-4 bg-teal-500 max-w-sm rounded-3xl">
         <Item
           name={item12.name}
           quantity={item12.quantity}
