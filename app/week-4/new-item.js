@@ -14,12 +14,14 @@ export default function NewItem() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-yellow-500">
-      <div className="bg-lime-600 shadow-lg p-8 text-center border-custom">
-        <h1 className="text-3xl font-bold text-center text-black mb-2 ">
+    <div className="flex items-center justify-center min-h-screen bg-stone-900">
+      <div className="bg-violet-500 shadow-lg p-8 text-center border-custom">
+        <h1 className="text-3xl font-extrabold text-center text-black mb-2 ">
           COUNTER PROGRAM FOR SHOPPING LIST
         </h1>
-        <h1 className="text-4xl font-bold text-black mb-4">Quantity: {quantity}</h1>
+        <h1 className="text-2xl font-bold text-black mb-4">
+          Quantity: {quantity}
+        </h1>
 
         <button
           className="font-large bg-gray-700 hover:bg-red-700 text-white font-bold p-2 px-4 rounded mr-2"
