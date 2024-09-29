@@ -44,7 +44,7 @@ export default function NewItem() {
 
         {
           <button
-            className="font-large bg-gray-700 hover:bg-amber-600 text-white font-bold 
+            className="font-large bg-gray-700 hover:bg-green-700 text-white font-bold 
           ml-2 px-4 p-2 rounded mr-2 "
             onClick={reset}
           >
