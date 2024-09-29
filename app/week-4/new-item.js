@@ -17,8 +17,6 @@ export default function NewItem() {
     setQuantity(1);
   };
 
-  
-
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
       <div className="bg-violet-500 shadow-lg p-8 text-center border-custom">
