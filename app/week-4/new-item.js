@@ -13,6 +13,12 @@ export default function NewItem() {
     setQuantity(quantity - 1 > 1 ? quantity - 1 : 1);
   };
 
+  const reset = () => {
+    setQuantity(1);
+  };
+
+  
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
       <div className="bg-violet-500 shadow-lg p-8 text-center border-custom">
@@ -37,6 +43,16 @@ export default function NewItem() {
         >
           Decrement
         </button>
+
+        {
+          <button
+            className="font-large bg-gray-700 hover:bg-amber-600 text-white font-bold 
+          ml-2 px-4 p-2 rounded mr-2 "
+            onClick={reset}
+          >
+            Reset
+          </button>
+        }
       </div>
     </div>
   );
