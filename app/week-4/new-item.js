@@ -19,7 +19,7 @@ export default function NewItem() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
-      <div className="bg-violet-500 shadow-lg p-8 text-center border-custom">
+      <div className="bg-yellow-300 shadow-lg p-8 text-center border-custom">
         <h1 className="text-3xl font-extrabold text-center text-black mb-2 ">
           COUNTER PROGRAM FOR SHOPPING LIST
         </h1>
