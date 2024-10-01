@@ -2,13 +2,23 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main>
-      <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <Link href="http://localhost:3000/week-2">week-2</Link><br />
-      <Link href="http://localhost:3000/week-3">week-3</Link><br />
-      <Link href="http://localhost:3000/week-4">week-4</Link>
+    <main className="bg-gray-800 p-64">
+      <h1 className="font-extrabold text-4xl text-cyan-500">
+        CPRG 306: Web Development 2 - Assignments
+      </h1>
 
-      <br />
+      <header className="font-extrabold text-2xl ">
+        <section>
+          <Link href="http://localhost:3000/week-2">week-2</Link>
+        </section>
+
+        <section classname="">
+          <Link href="http://localhost:3000/week-3">week-3</Link>
+        </section>
+        <section classname="font-extrabold">
+          <Link href="http://localhost:3000/week-4">week-4</Link>
+        </section>
+      </header>
     </main>
   );
 }
