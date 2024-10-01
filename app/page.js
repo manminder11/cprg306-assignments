@@ -9,14 +9,20 @@ export default function Page() {
 
       <header className="font-extrabold text-2xl ">
         <section>
-          <Link href="http://localhost:3000/week-2">week-2</Link>
+          <Link to href="http://localhost:3000/week-2" target="_blank">
+            week-2
+          </Link>
         </section>
 
         <section classname="">
-          <Link href="http://localhost:3000/week-3">week-3</Link>
+          <Link href="http://localhost:3000/week-3" target="_blank">
+            week-3
+          </Link>
         </section>
         <section classname="font-extrabold">
-          <Link href="http://localhost:3000/week-4">week-4</Link>
+          <Link href="http://localhost:3000/week-4" target="_blank">
+            week-4
+          </Link>
         </section>
       </header>
     </main>

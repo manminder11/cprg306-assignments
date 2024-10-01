@@ -18,7 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-color:rgba(20, 20, 20, 0.689)
+  background-color: rgba(20, 20, 20, 0.689);
 }
 
 @layer utilities {
@@ -26,4 +26,3 @@ body {
     text-wrap: balance;
   }
 }
-
