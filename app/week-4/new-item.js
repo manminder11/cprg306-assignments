@@ -24,7 +24,7 @@ export default function NewItem() {
           COUNTER PROGRAM FOR SHOPPING LIST
         </h1>
         <h1 className="text-2xl font-bold text-black mb-4">
-          Quantity: {quantity}
+          Quantity:{quantity}
         </h1>
 
         <button
