@@ -14,8 +14,22 @@ export default function NewItem() {
   };
 
   const reset = () => {
+    setname("");
     setQuantity(1);
   };
+
+  const [name , setName] = useState("") ;
+  const[category  , setcategory] = useState("produce") ;
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    item = {name , quantity , category};
+    console.log(item);
+    Window.alert(name + " " + quantity + " " + category);
+
+  }
+
+
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
