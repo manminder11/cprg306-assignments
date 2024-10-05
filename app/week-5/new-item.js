@@ -40,7 +40,7 @@ export default function NewItem() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
-      <div className="bg-yellow-300 shadow-lg p-8 text-center border-custom">
+      <div className="bg-yellow-300 shadow-lg p-8 text-center ">
         <h1 className="text-3xl font-extrabold text-center text-black mb-2 ">
           COUNTER PROGRAM FOR SHOPPING LIST
         </h1>
@@ -92,8 +92,9 @@ export default function NewItem() {
             <option value="dairy">Dairy</option>
             <option value="bakery">Bakery</option>
             <option value="meat">Meat</option>
-            <option value="frozen">Frozen</option>
-            <option value="miscellaneous">Miscellaneous</option>
+            <option value="household">household</option>
+            <option value="dry goods">dry goods</option>
+            <option value="canned goods">canned goods</option>
           </select>
 
           <div>
