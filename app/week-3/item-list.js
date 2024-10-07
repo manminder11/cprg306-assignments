@@ -71,6 +71,24 @@ export default function ItemList() {
     quantity: 4,
     category: "household",
   };
+
+  const item13 = {
+    name: "frozen pizza 🍕",
+    quantity: 10,
+    category: "frozen foods",
+  };
+
+  const item14 = {
+    name: "coca-cola, 2 L 🥤",
+    quantity: 1,
+    category: "beverages",
+  };
+
+  const item15 = {
+    name: "chips 🍟",
+    quantity: 1,
+    category: "snacks",
+  };
   return (
     <main>
       <div className="p-2 pl-4 m-4 bg-neutral-500 max-w-sm rounded-3xl">
@@ -166,6 +184,30 @@ export default function ItemList() {
           name={item12.name}
           quantity={item12.quantity}
           category={item12.category}
+        />
+      </div>
+
+      <div className="p-2 pl-4 m-4 bg-cyan-600 max-w-sm rounded-3xl">
+        <Item
+          name={item13.name}
+          quantity={item13.quantity}
+          category={item13.category}
+        />
+      </div>
+
+      <div className="p-2 pl-4 m-4 bg-rose-500 max-w-sm rounded-3xl">
+        <Item
+          name={item14.name}
+          quantity={item14.quantity}
+          category={item14.category}
+        />
+      </div>
+
+      <div className="p-2 pl-4 m-4 bg-lime-600 max-w-sm rounded-3xl">
+        <Item
+          name={item15.name}
+          quantity={item15.quantity}
+          category={item15.category}
         />
       </div>
     </main>
