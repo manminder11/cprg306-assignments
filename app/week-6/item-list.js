@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Item from "./item.js";
-import items from "./items.JSON";
+import items from "./items.json";
 export default function ItemList() {
   const [sortby, setSortby] = useState("name");
 
@@ -16,9 +16,11 @@ export default function ItemList() {
     <Item
       key={item.id}
       name={item.name}
-      quantity={item.quantity}
       category={item.category}
-    />
+      quantity={item.quantity}
+    />  
+
+
   ));
 
   return (

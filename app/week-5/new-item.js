@@ -8,7 +8,7 @@ export default function NewItem() {
   const [category, setCategory] = useState("produce");
 
   const increment = () => {
-    setQuantity(quantity + 1 < 20 ? quantity + 1 : 20);
+     setQuantity(quantity + 1 < 20 ? quantity + 1 : 20);
   };
 
   const decrement = () => {
@@ -51,30 +51,27 @@ export default function NewItem() {
 
         <button
           className="font-large bg-gray-700 hover:bg-red-700 text-white font-bold p-2 px-4 rounded mr-2"
-          disabled={quantity >= 20}
+          disabled={quantity > 20}
           onClick={increment}
         >
           Increment
         </button>
         <button
-          className="font-large font-large bg-yellow-800 hover:bg-cyan-700 text-white font-bold p-2 px-4  mt-12rounded"
+          className="font-large bg-yellow-800 hover:bg-cyan-700 text-white font-bold p-2 px-4 rounded mr-2"
           disabled={quantity <= 1}
           onClick={decrement}
         >
           Decrement
         </button>
 
-        {
-          <button
-            className="font-large bg-gray-700 hover:bg-green-700 text-white font-bold 
-          ml-2 px-4 p-2 rounded mr-2 "
-            onClick={reset}
-          >
-            Reset
-          </button>
-        }
+        <button
+          className="font-large bg-gray-700 hover:bg-green-700 text-white font-bold ml-2 px-4 p-2 rounded"
+          onClick={reset}
+        >
+          Reset
+        </button>
 
-        <form className="flex flex-col items-center mt-4 space-y-4">
+        <form className="flex flex-col items-center mt-4 space-y-4" onSubmit={handleSubmit}>
           <input
             required
             type="text"
@@ -93,19 +90,18 @@ export default function NewItem() {
             <option value="dairy">Dairy</option>
             <option value="bakery">Bakery</option>
             <option value="meat">Meat</option>
-            <option value="household">household</option>
-            <option value="dry goods">dry goods</option>
-            <option value="canned goods">canned goods</option>
-            <option value="frozen foods">frozen</option>
-            <option value="beverages">beverages</option>
-            <option value="snacks">snacks</option>
+            <option value="household">Household</option>
+            <option value="dry goods">Dry Goods</option>
+            <option value="canned goods">Canned Goods</option>
+            <option value="frozen foods">Frozen Foods</option>
+            <option value="beverages">Beverages</option>
+            <option value="snacks">Snacks</option>
           </select>
 
           <div>
             <button
               type="submit"
               className="font-large bg-blue-700 hover:bg-blue-900 text-white font-bold p-2 px-4 rounded mt-4"
-              onClick={handleSubmit}
             >
               Submit
             </button>
