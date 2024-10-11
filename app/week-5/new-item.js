@@ -29,6 +29,7 @@ export default function NewItem() {
       category: category,
       quantity: quantity,
     };
+
     console.log({ item });
     window.alert(
       `Item: ${item.name} \nCategory: ${item.category} \nQuantity: ${item.quantity}`
