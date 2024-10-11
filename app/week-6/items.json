@@ -71,4 +71,27 @@
     "quantity": 4,
     "category": "household"
   }
+
+  {
+    "id": "13H2KJH3k2j3H1k",
+    "name": "frozen pizza 🍕",
+    "quantity": 10,
+    "category": "frozen foods"
+  }
+
+  {
+    "id": "14k2J3K1H2GJKH1",
+    "name": "coca cola, 2 L 🥤",
+    "quantity": 1,
+    "category": "beverages"
+  }
+
+  {
+    "id": "15H1h1H2KJH3k2j",
+    "name": "chips, 🍟",
+    "quantity": 1,
+    "category": "snacks"
+  }
+
+
 ]
