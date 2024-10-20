@@ -16,10 +16,13 @@ export default function ItemList() {
     <main>
       <section>
         <h2>Sort by:</h2>
-        <button onClick={() => setSortBy("name")}>Name</button>
+        <button classname="font-extrabold" onClick={() => setSortBy("name")}>
+          Name
+        </button>
         <button onClick={() => setSortBy("category")}>Category</button>
       </section>
       <ul>
+        
         {sortedItems.map((item) => (
           <li key={item.id}>
             <Item {...item} />
