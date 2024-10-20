@@ -15,7 +15,15 @@ export default function ItemList() {
   }
 
   return (
-    <main style={{ backgroundColor: "black", padding: "20px" }}>
+    <main
+      style={{
+        backgroundColor: "black",
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <section style={{ marginBottom: "20px" }}>
         <h2 className="font-extrabold text-2xl text-white">Sort by:</h2>
         <button
@@ -32,25 +40,40 @@ export default function ItemList() {
           Category
         </button>
       </section>
-      <ul style={{ padding: "0", listStyleType: "none" }}>
+      <ul
+        style={{
+          padding: "0",
+          listStyleType: "none",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         {sortedItems.map((item) => (
-          <li key={item.id} style={{ marginBottom: "10px", transition: "all 0.3s ease-in-out" }}>
-            <div style={{ 
-              border: "2px solid white", 
-              padding: "10px", 
-              backgroundColor: item.color,
-              borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(255, 255, 255, 0.2)",
-              transition: "transform 0.3s ease-in-out, flex 0.3s ease-in-out"
+          <li
+            key={item.id}
+            style={{
+              marginBottom: "10px",
+              transition: "all 0.3s ease-in-out",
+              width: "80%",
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.05)";
-              e.currentTarget.style.flex = "1.1";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.flex = "1";
-            }}
+          >
+            <div
+              style={{
+                border: "2px solid white",
+                padding: "10px",
+                backgroundColor: item.color,
+                borderRadius: "10px",
+                boxShadow: "0 4px 8px rgba(255, 255, 255, 0.2)",
+                transition: "transform 0.3s ease-in-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
             >
               <Item {...item} />
             </div>
