@@ -15,14 +15,36 @@ export default function ItemList() {
   return (
     <main>
       <section>
-        <h2>Sort by:</h2>
-        <button classname="font-extrabold" onClick={() => setSortBy("name")}>
+        <h2 style={{ fontSize: "1.125rem", fontWeight: "bold" }}>Sort by:</h2>
+        <button
+          style={{
+            fontWeight: "800",
+            backgroundColor: "#3b82f6",
+            color: "white",
+            hover: "cursor",
+            
+            padding: "0.5rem 1rem",
+            borderRadius: "0.375rem",
+            marginRight: "0.5rem",
+          }}
+          onClick={() => setSortBy("name")}
+        >
           Name
         </button>
-        <button onClick={() => setSortBy("category")}>Category</button>
+        <button
+          style={{
+            fontWeight: "800",
+            backgroundColor: "#3b82f6",
+            color: "white",
+            padding: "0.5rem 1rem",
+            borderRadius: "0.375rem",
+          }}
+          onClick={() => setSortBy("category")}
+        >
+          Category
+        </button>
       </section>
       <ul>
-        
         {sortedItems.map((item) => (
           <li key={item.id}>
             <Item {...item} />
