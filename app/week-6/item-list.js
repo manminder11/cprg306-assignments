@@ -15,26 +15,29 @@ export default function ItemList() {
   }
 
   return (
-    <main>
-      <section>
+    <main style={{ backgroundColor: "black", padding: "20px" }}>
+      <section style={{ marginBottom: "20px" }}>
         <h2 className="font-extrabold text-2xl ">Sort by:</h2>
         <button
-          className="font-extrabold bg-blue-500 text-white hover:cursor-pointer py-2 px-4 rounded-md mr-2"
+          className="font-extrabold bg-blue-500 text-white hover:cursor-pointer py-2 px-4 rounded-md mr-2 hover:bg-blue-700"
           onClick={() => setSortBy("name")}
+          style={{ marginRight: "10px" }}
         >
           Name
         </button>
         <button
-          className="font-extrabold bg-blue-500 text-white py-2 px-4 rounded-md"
+          className="font-extrabold bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700"
           onClick={() => setSortBy("category")}
         >
           Category
         </button>
       </section>
-      <ul>
+      <ul style={{ padding: "0", listStyleType: "none" }}>
         {sortedItems.map((item) => (
-          <li key={item.id}>
-            <Item {...item} />
+          <li key={item.id} style={{ marginBottom: "10px" }}>
+            <div style={{ border: "2px solid white", padding: "10px" }}>
+              <Item {...item} />
+            </div>
           </li>
         ))}
       </ul>
