@@ -36,6 +36,7 @@ export default function Page() {
           <Link href="http://localhost:3000/week-6" target="_blank">
             week-6
           </Link>
+        </section>
 
           <section classname="font-extrabold">
             <Link href="http://localhost:3000/week-7" target="_blank">
