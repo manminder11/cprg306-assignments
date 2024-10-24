@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("produce");
@@ -25,15 +25,16 @@ export default function NewItem() {
     event.preventDefault();
 
     const item = {
+      id: Date.now(),
       name: name,
       category: category,
       quantity: quantity,
     };
 
-    console.log({ item });
-    window.alert(
-      `Item: ${item.name} \nCategory: ${item.category} \nQuantity: ${item.quantity}`
-    );
+    if (onAddItem) {
+      onAddItem(item);
+    }
+
     setQuantity(1);
     setCategory("produce");
     setName("");
