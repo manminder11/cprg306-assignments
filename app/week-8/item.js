@@ -6,7 +6,7 @@ export default function Item(props) {
       <ul>
         <li>
           <section onClick={onSelect}>
-            {" "}
+          
          
             <h1 className="font-extrabold text-2xl pb-3">{name}</h1>
             <p>
