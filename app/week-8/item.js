@@ -1,13 +1,15 @@
 export default function Item(props) {
+  const { name, quantity, category, onselect } = props;
+
+  
   return (
     <main>
       <ul>
         <li>
-          <section>
-            <h1 className="font-extrabold text-2xl pb-3" >{props.name}</h1>
+          <section onClick={onselect}>
+            <h1 className="font-extrabold text-2xl pb-3">{name}</h1>
             <p>
-              Buy {props.quantity} in {props.category}
-
+              Buy {quantity} in {category}
             </p>
           </section>
         </li>
