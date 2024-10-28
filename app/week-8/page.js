@@ -5,7 +5,7 @@ import ItemList from "./item-list.js";
 import itemsData from "./items.json";
 import NewItem from "./new-item.js";
 
-export default function Page() {  
+export default function Page() {
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
@@ -14,7 +14,10 @@ export default function Page() {
   }
 
   function handleItemSelect(item) {
-    const cleanedItemName = item.name.trim();
+    const cleanedItemName = item.name
+      .split(",")[0]
+      .replace(/[\u{1F600}-\u{1F6FF}]/gu, "")
+      .trim();
     setSelectedItemName(cleanedItemName);
   }
 
