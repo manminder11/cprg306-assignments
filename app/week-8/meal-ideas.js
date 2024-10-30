@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function MealIdeas({ ingredient }) {
   const [meals, setMeals] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
 
 
   const fetchMealIdeas = async (ingredient) => {
@@ -15,7 +15,7 @@ export default function MealIdeas({ ingredient }) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      setMeals(data.meals || []);
+      setMeals(data.meals ||[]);
     } catch (error) {
       setError(error.message);
     }
@@ -26,7 +26,8 @@ export default function MealIdeas({ ingredient }) {
     if (ingredient) {
       fetchMealIdeas(ingredient);
     }
-  }, [ingredient]);
+  }, [ingredient]); 
+ 
 
   return (
     <div className="p-4">
