@@ -8,7 +8,7 @@ export default function NewItem({ onAddItem }) {
   const [category, setCategory] = useState("produce");
 
   const increment = () => {
-     setQuantity(quantity + 1 < 20 ? quantity + 1 : 20);
+    setQuantity(quantity + 1 < 20 ? quantity + 1 : 20);
   };
 
   const decrement = () => {
@@ -42,8 +42,8 @@ export default function NewItem({ onAddItem }) {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-stone-900">
-      <div className="bg-yellow-300 shadow-lg p-8 text-center ">
-        <h1 className="text-3xl font-extrabold text-center text-black mb-2 ">
+      <div className="bg-yellow-300 shadow-lg p-8 text-center rounded-lg">
+        <h1 className="text-3xl font-extrabold text-center text-black mb-2">
           COUNTER PROGRAM FOR SHOPPING LIST
         </h1>
         <h1 className="text-2xl font-bold text-black mb-4">
@@ -51,14 +51,14 @@ export default function NewItem({ onAddItem }) {
         </h1>
 
         <button
-          className="font-large bg-gray-700 hover:bg-red-700 text-white font-bold p-2 px-4 rounded mr-2"
-          disabled={quantity > 20}
+          className="font-large bg-gray-700 hover:bg-red-700 text-white font-bold p-2 px-4 rounded mr-2 transition duration-300 ease-in-out"
+          disabled={quantity >= 20}
           onClick={increment}
         >
           Increment
         </button>
         <button
-          className="font-large bg-yellow-800 hover:bg-cyan-700 text-white font-bold p-2 px-4 rounded mr-2"
+          className="font-large bg-yellow-800 hover:bg-cyan-700 text-white font-bold p-2 px-4 rounded mr-2 transition duration-300 ease-in-out"
           disabled={quantity <= 1}
           onClick={decrement}
         >
@@ -66,7 +66,7 @@ export default function NewItem({ onAddItem }) {
         </button>
 
         <button
-          className="font-large bg-gray-700 hover:bg-green-700 text-white font-bold ml-2 px-4 p-2 rounded"
+          className="font-large bg-gray-700 hover:bg-green-700 text-white font-bold ml-2 px-4 p-2 rounded transition duration-300 ease-in-out"
           onClick={reset}
         >
           Reset
@@ -79,11 +79,11 @@ export default function NewItem({ onAddItem }) {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter Item Name"
-            className="p-2 mt-4 text-black"
+            className="p-2 mt-4 text-black rounded border border-gray-300 transition duration-300 ease-in-out"
           />
 
           <select
-            className="text-black"
+            className="text-black p-2 rounded border border-gray-300 transition duration-300 ease-in-out"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -102,7 +102,7 @@ export default function NewItem({ onAddItem }) {
           <div>
             <button
               type="submit"
-              className="font-large bg-blue-700 hover:bg-blue-900 text-white font-bold p-2 px-4 rounded mt-4"
+              className="font-large bg-blue-700 hover:bg-blue-900 text-white font-bold p-2 px-4 rounded mt-4 transition duration-300 ease-in-out"
             >
               Submit
             </button>
