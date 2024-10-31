@@ -27,7 +27,7 @@ function MealList({ meals, onMealClick }) {
           onMouseEnter={() => console.log(`Hovered on: ${meal.strMeal}`)}
           onMouseLeave={() => console.log(`Unhovered on: ${meal.strMeal}`)}
           onClick={() => onMealClick(meal)}
-          whileHover={{ scale: 1.1, color: colors[index % colors.length], fontWeight: "bold" }}
+          whileHover={{ scale: 1.1, color: colors[index % colors.length], fontWeight: "bold", filter: "brightness(1.2)" }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
