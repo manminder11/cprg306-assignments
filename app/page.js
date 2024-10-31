@@ -49,6 +49,12 @@ export default function Page() {
             week-8
           </Link>
         </section>
+
+        <section classname="font-extrabold">
+          <Link href="http://localhost:3000/week-9" target="_blank">
+            week-9
+          </Link>
+        </section>
       </header>
     </main>
   );
