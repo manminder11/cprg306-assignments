@@ -2,8 +2,16 @@
 import { useState } from "react";
 import Item from "./item.js";
 
-export default function ItemList({ items, onItemSelect }) {
+export default function ItemList({ items, onItemSelect, isAuthenticated }) {
   const [sortBy, setSortBy] = useState("name");
+
+  if (!isAuthenticated) {
+    return (
+      <main className="bg-gray-900 p-5 flex flex-col items-center min-h-screen">
+        <h2 className="font-extrabold text-2xl text-white mb-4 text-center">Please sign in to view your shopping list.</h2>
+      </main>
+    );
+  }
 
   let sortedItems = [...items];
   if (sortBy === "category") {

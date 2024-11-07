@@ -1,18 +1,26 @@
-"use client"; 
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { useUserAuth } from "./_utils/auth-context";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+
 export default function Page() {
   const router = useRouter();
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+
+  const handleSignOut = () => {
+    firebaseSignOut();
+    router.replace("/week-9"); // Redirect to /week-9 after signing out
+  };
+
+  // Protected Route logic
   useEffect(() => {
-    if (typeof window !== "undefined" && !user) {
-      router.push("/week-9");
+    if (!user) {
+      router.replace("/week-9"); // Redirect to /week-9 if not signed in
     }
   }, [user, router]);
 
+  // Render sign-in button if user is not authenticated
   if (!user) {
     return (
       <div>
@@ -21,26 +29,15 @@ export default function Page() {
     );
   }
 
+  // Render the page content for signed-in users
   return (
     <div>
-      <button
-        onClick={() => {
-          firebaseSignOut();
-          window.location.href = "/week-9";
-        }}
-      >
-        Sign Out
-      </button>
+      <button onClick={handleSignOut}>Sign Out</button>
       <p>Welcome, {user.displayName}!</p>
+
+      {/* Link to the Shopping List page, accessible only if signed in */}
       <Link href="/week-9/Shopping-List" legacyBehavior>
-        <a onClick={(e) => {
-          if (!user) {
-            e.preventDefault();
-            alert("You must be signed in to access the Shopping List.");
-          }
-        }}>
-          Go to Shopping List
-        </a>
+        <a>Go to Shopping List</a>
       </Link>
     </div>
   );
