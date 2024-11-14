@@ -1,17 +1,32 @@
 
 "use client";
 import { useState } from "react";
+import { useEffect } from "react";
 import MealIdeas from "./meal-ideas.js";
 import ItemList from "./item-list.js";
-import itemsData from "./items.json";
+import getItems from "./shopping-list-service.js";
+import additem from "./shopping-list-service.js";
 import NewItem from "./new-item.js";
+
 
 export default function Page() {
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
+  useEffect(() => { 
+    async function fetchItems() {
+      const items = await getItems();
+      setItems(items);
+    }
+    fetchItems();
+  }, []);
 
-  function handleAddItem(item) {
-    setItems([...items, item]);
+
+
+  async function handleAddItem(item) {
+    const userId = user.uid;
+    const newItemId = await additem(item, userId);
+    const newItem = { ...item, id: newItemId };
+    setItems([...items, newItem]);
   }
 
   function handleItemSelect(item) {
